@@ -2,11 +2,9 @@ package de.lv1871;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.Set;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -30,7 +28,7 @@ public class Main extends Application {
     private static final int WIDTH = 800;
     private static final int HEIGHT = 600;
 
-    private static final int BOID_GROUPS = 5;
+    private static final int BOID_GROUPS = 2;
     private static final Map<Integer, Color> GROUP_COLORS = new HashMap<>();
     static {
         GROUP_COLORS.put(0, Color.RED);
@@ -38,7 +36,7 @@ public class Main extends Application {
         GROUP_COLORS.put(2, Color.BLUE);
     }
 
-    private static final int NUMBER_OF_BOIDS = 500;
+    private static final int NUMBER_OF_BOIDS = 1;
     private static final double BOID_POLYGON_SIZE = 5;
 
     public static void main(String[] args) {
@@ -57,7 +55,7 @@ public class Main extends Application {
         Slider separationSlider = createSlider(0, 3);
         Slider alignmentSlider = createSlider(0, 3);
         Slider cohesionSlider = createSlider(0, 3);
-        Slider speedSlider = createSlider(1, 30);
+        Slider speedSlider = createSlider(1, 5);
         Slider perceptionRadiusSlider = createSlider(1, 50);
         Slider changeProbabilitySlider = createSlider(0, 1);
 
